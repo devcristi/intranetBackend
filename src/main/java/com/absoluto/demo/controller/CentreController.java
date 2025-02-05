@@ -41,4 +41,9 @@ public class CentreController {
         List<Centre> centres = centreRepository.findAll();
         return ResponseEntity.ok(centres);
     }
+    @GetMapping("/count")
+    public ResponseEntity<Long> getCentreCount() {
+        long count = centreRepository.count();
+        return ResponseEntity.ok(count);
+    }
 }

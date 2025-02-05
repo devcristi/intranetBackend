@@ -28,4 +28,8 @@ public class CentreService {
         centre.getAssignedUsers().add(user);
         return centreRepository.save(centre);
     }
+
+    public long getCentreCount() {
+        return centreRepository.count();
+    }
 }
